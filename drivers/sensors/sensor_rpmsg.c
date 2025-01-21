@@ -875,7 +875,7 @@ static int sensor_rpmsg_control(FAR struct sensor_lowerhalf_s *lower,
     {
       if (cmd == SNIOC_SET_NONWAKEUP)
         {
-          return sensor_rpmsg_ioctl(dev, cmd, arg, 1, true);
+          return sensor_rpmsg_ioctl(dev, cmd, arg, 0, false);
         }
       else
         {
